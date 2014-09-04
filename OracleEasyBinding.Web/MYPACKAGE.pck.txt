@@ -1,0 +1,65 @@
+create or replace package MYPACKAGE is
+
+  type order_rec is record
+  (
+    order_id         number,
+    customer_number  number,
+    customer_name    varchar2(2000),
+    amount          number
+  );
+  type orders_refcur is ref cursor return order_rec;
+    
+  procedure get_orders(p_customer_number in number,
+                     p_order_data out nocopy orders_refcur);
+  procedure get_order(p_order_id  in number,
+                      p_order_data out nocopy orders_refcur);
+  function getcustomer_number_by_order_id(p_order_id in number) return number;
+end MYPACKAGE;
+/
+create or replace package body MYPACKAGE is
+
+procedure get_orders(p_customer_number in number,
+                     p_order_data out nocopy orders_refcur) is
+  begin
+    open p_order_data for
+    select 111 as order_id,
+           123 as customer_number,
+           'test customer 1' as customer_name,
+           122.50 as amount
+    from dual 
+    where p_customer_number=p_customer_number
+    union all
+     select 222 as order_id,
+           456 as customer_number,
+           'test customer 2' as customer_name,
+           1000.90 as amount
+    from dual 
+    where p_customer_number=p_customer_number;
+  end get_orders;
+  
+  procedure get_order(p_order_id  in number,
+                      p_order_data out nocopy orders_refcur) is
+  begin
+    open p_order_data for
+    select 111 as order_id,
+           123 as customer_number,
+           'test customer 1' as customer_name,
+           122.50 as amount
+    from dual 
+    where p_order_id=p_order_id;
+  end get_order;
+  
+  
+  function getcustomer_number_by_order_id(p_order_id in number) return number is
+    l_customer_number number;
+  begin
+    select 123 as customer_number
+    into   l_customer_number
+    from   dual
+    where  p_order_id=p_order_id;
+
+    return l_customer_number;
+  end getcustomer_number_by_order_id;
+  
+end MYPACKAGE;
+/

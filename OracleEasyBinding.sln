@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleEasyBinding.Web", "OracleEasyBinding.Web\OracleEasyBinding.Web.csproj", "{940DC45C-A205-473B-8C2D-3961695B83A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleEasyBinding.Entities", "OracleEasyBinding.Entities\OracleEasyBinding.Entities.csproj", "{3F08D52E-FF1A-49F9-B696-68142D3A86A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleEasyBinding.DAL", "OracleEasyBinding.DAL\OracleEasyBinding.DAL.csproj", "{BFBFA3F0-8F65-49DD-9F1D-CA07604BD5FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{940DC45C-A205-473B-8C2D-3961695B83A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940DC45C-A205-473B-8C2D-3961695B83A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940DC45C-A205-473B-8C2D-3961695B83A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940DC45C-A205-473B-8C2D-3961695B83A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F08D52E-FF1A-49F9-B696-68142D3A86A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F08D52E-FF1A-49F9-B696-68142D3A86A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F08D52E-FF1A-49F9-B696-68142D3A86A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F08D52E-FF1A-49F9-B696-68142D3A86A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBFA3F0-8F65-49DD-9F1D-CA07604BD5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBFA3F0-8F65-49DD-9F1D-CA07604BD5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBFA3F0-8F65-49DD-9F1D-CA07604BD5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBFA3F0-8F65-49DD-9F1D-CA07604BD5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
